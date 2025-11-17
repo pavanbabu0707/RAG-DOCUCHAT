@@ -1,0 +1,30 @@
+notepad .gitignore
+```
+
+Copy-paste this:
+```
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# ChromaDB
+chroma_db/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files (optional - uncomment if you don't want to track)
+# sample_doc.txt
+# test_*.py

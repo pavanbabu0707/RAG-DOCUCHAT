@@ -1,0 +1,24 @@
+notepad sample_doc.txt
+```
+
+```
+Artificial Intelligence (AI) is the simulation of human intelligence by machines. 
+AI systems can perform tasks that typically require human intelligence, such as 
+visual perception, speech recognition, decision-making, and language translation.
+
+Machine Learning is a subset of AI that enables systems to learn and improve from 
+experience without being explicitly programmed. It focuses on developing algorithms 
+that can access data and learn from it.
+
+Deep Learning is a subset of machine learning that uses neural networks with multiple 
+layers. These networks can learn complex patterns in large amounts of data. Deep 
+learning has achieved remarkable results in image recognition, natural language 
+processing, and game playing.
+
+Neural Networks are computing systems inspired by biological neural networks. They 
+consist of interconnected nodes (neurons) organized in layers. Each connection has 
+a weight that adjusts as learning proceeds.
+
+Natural Language Processing (NLP) is a branch of AI that helps computers understand, 
+interpret, and generate human language. NLP combines computational linguistics with 
+machine learning and deep learning models.
