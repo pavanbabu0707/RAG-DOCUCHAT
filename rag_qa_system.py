@@ -1,6 +1,7 @@
 # rag_qa_system.py - Complete RAG Q&A System
 
-from document_loader import load_text_file, split_into_chunks
+from document_loader import split_into_chunks
+from pdf_handler import load_document
 from embeddings_storage import create_embedding_model, create_vector_database, create_or_get_collection
 from sentence_transformers import SentenceTransformer
 import requests
@@ -24,8 +25,8 @@ def embed_document(file_path, model, collection, chunk_size=500, chunk_overlap=5
     print("DOCUMENT PROCESSING")
     print(f"{'='*60}")
     
-    # Step 1: Load document
-    text = load_text_file(file_path)
+    # Step 1: Load document (supports PDF and TXT)
+    text = load_document(file_path)
     if not text:
         return 0
     
@@ -206,10 +207,16 @@ if __name__ == "__main__":
     print("="*60)
     
     # Configuration
-    DOCUMENT_PATH = "sample_doc.txt"
+    DOCUMENT_PATH = "sample_doc.txt"  # or "your_document.pdf"
     COLLECTION_NAME = "qa_documents"
     CHUNK_SIZE = 400
     CHUNK_OVERLAP = 50
+    
+    # You can also ask user for file path
+    print("\nDefault document:", DOCUMENT_PATH)
+    user_file = input("Enter different file path (or press Enter to use default): ").strip()
+    if user_file:
+        DOCUMENT_PATH = user_file
     
     # Step 1: Initialize components
     print("\nInitializing system...")
