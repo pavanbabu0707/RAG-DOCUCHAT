@@ -21,7 +21,7 @@ try:
     from sentence_transformers import SentenceTransformer
     print("✓ Sentence Transformers works!")
 except ImportError as e:
-    print(f"✗ Sentence Transformers error: {e}")
+    print(f"✗ Sentence Transformers error is wrong: {e}")
 
 # Test 4: PyPDF
 try:
